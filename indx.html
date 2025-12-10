@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام الحضور والغياب - المدرسة السعودية</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <button class="nav-btn active" data-page="absence">نموذج الغياب</button>
+    <button class="nav-btn" data-page="admin">لوحة الإدارة</button>
+    <button class="nav-btn" data-page="counseling">قسم الإرشاد</button>
+  </nav>
+
+  <!-- Absence Form Page -->
+  <div id="absence-page" class="page active">
+    <div class="container">
+      <header>
+        <h1>نظام الثانويه الاولى لإدارة الغياب</h1>
+      </header>
+
+      <div class="form-container">
+        <div class="class-selector">
+          <label for="classSelect">اختر الفصل:</label>
+          <select id="classSelect">
+            <option value="">-- اختر الفصل --</option>
+            <option value="class1">اول ثانوي أ</option>
+            <option value="class2">اول ثانوي ب</option>
+            <option value="class3">اول ثانوي ج</option>
+            <option value="class4">ثاني ثانوي أ</option>
+            <option value="class5">ثاني ثانوي ب</option>
+            <option value="class6">ثالث ثانوي أ</option>
+            <option value="class7">ثالث ثانوي ب</option>
+          </select>
+        </div>
+
+        <form id="absenceForm" class="absence-form">
+          <h2 id="formTitle">نموذج تسجيل الغياب</h2>
+          <div id="studentsList" class="students-list">
+            <!-- Students will be loaded here dynamically -->
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">تسجيل الغياب</button>
+            <button type="button" id="resetBtn" class="reset-btn">إعادة تعيين</button>
+          </div>
+        </form>
+
+        <div id="message" class="message"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard Page -->
+  <div id="admin-page" class="page">
+    <div class="container">
+      <header>
+        <h1>لوحة إدارة الغياب</h1>
+      </header>
+
+      <div class="form-container">
+        <h2>إحصائيات الغياب</h2>
+        <div class="stats">
+          <!-- Statistics will be loaded dynamically -->
+        </div>
+
+        <h2>سجل الغياب حسب الفصول</h2>
+        <div id="adminDashboard" class="dashboard">
+          <!-- Absence records will be loaded here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Counseling Page -->
+  <div id="counseling-page" class="page">
+    <div class="container">
+      <header>
+        <h1>قسم الإرشاد - المتابعة</h1>
+      </header>
+
+      <div class="form-container">
+        <h2>الطلاب المتغيبون 5 مرات أو أكثر</h2>
+        <p style="text-align: center; margin-bottom: 20px; color: #666;">
+          هذه قائمة الطلاب الذين تجاوز عدد غياباتهم 5 مرات في الشهر الحالي ويحتاجون لمتابعة من قسم الإرشاد
+        </p>
+
+        <ul id="counselingList" class="counseling-list">
+          <!-- Counseling list will be loaded here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW: Footer with credit line -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 جميع الحقوق محفوظة</p>
+      <p>تم التصميم والتطوير بواسطة امنة بلال السحله • Done by Amnah Bilal Al-Sahla</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
